@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id("com.github.johnrengelman.shadow") version "8.1.1"
+
+}
+
+group = 'br.com.gabrielmartins.itemzider'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+
+    implementation("com.github.azbh111:craftbukkit-1.7.10:R")
+  //  compileOnly(files("C:/Users/GabrielMartins/Desktop/rede flame/mods/DragonBlockC-v1.4.85.jar"))
+   // compileOnly(files("C:/Users/GabrielMartins/Desktop/rede flame/mods/JRMCore-v1.3.51.jar"))
+
+   // compileOnly(files("F:\\API\\server.jar"))
+  //  compileOnly(files("C:/Users/GabrielMartins/Desktop/rede flame/plugins/Vault (1).jar"))
+    compileOnly("org.projectlombok:lombok:1.18.24")
+    annotationProcessor("org.projectlombok:lombok:1.18.24")
+    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+}
+
+tasks {
+    shadowJar {
+        destinationDirectory.set(file("C:/Users/GabrielMartins/Desktop/rede flame/plugins"))
+    }
+}

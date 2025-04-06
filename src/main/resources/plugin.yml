@@ -1,0 +1,8 @@
+name: dbcItemZider
+author: gabrielmartins
+version: 9.1
+main: br.com.gabrielmartins.itemzider.ItemizerPlugin
+commands:
+  itemizer:
+    description: Itemizer menu
+    usage: /itemizer <args>
